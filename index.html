@@ -11,41 +11,146 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Coming soon" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <link rel="stylesheet" href="./css/coming-soon.css">
+
+    <!-- base/layout -->
+    <link rel="stylesheet" href="./css/base/base.css">
+    <link rel="stylesheet" href="./css/base/layout.css">
+    <!-- vendor -->
+    <link rel="stylesheet" href="./css/vendor/font-awesome.min.css">
+    <!-- components -->
+    <link rel="stylesheet" href="./css/components/clock.css">
+    <link rel="stylesheet" href="./css/components/mouse.css">
+    <link rel="stylesheet" href="./css/components/progress-bar.css">
+    <link rel="stylesheet" href="./css/components/forms.css">
+    <!-- custom page -->
+    <link rel="stylesheet" href="./css/pages/coming-soon.css">
 </head>
 
 <body>
-    <header class="container bg-blue">
+    <header class="container bg-blue hero">
         <div class="row-short">
-            <img src="./images/logo.png" alt="Logo">
-            <h1>Coming soon</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolor perferendis sint corrupti nisi quam labore vitae dolore magni minima eos, iusto sit culpa deserunt aliquid delectus commodi soluta ex?</p>
+            <img class="logo" src="./images/logo.png" alt="Logo">
+            <h1 class="main-title">Coming soon</h1>
+            <p class="main-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima unde
+                necessitatibus nulla debitis suscipit quae dignissimos aspernatur, fuga ab perferendis?</p>
+            <div class="clock">
+                <div class="time">
+                    <div class="value">328</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="time">
+                    <div class="value">09</div>
+                    <div class="label">Hours</div>
+                </div>
+                <div class="time">
+                    <div class="value">37</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="time">
+                    <div class="value">39</div>
+                    <div class="label">Seconds</div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-email">
+                    <label for="sub-email">Email</label>
+                    <input id="sub-email" type="email" value=""placeholder="Your email, eg: user@email.xyz" minlength="3"maxlength="25"
+                    autofocus required>
+                </div>
+                <div class="header">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+            <div class="mouse"></div>
         </div>
     </header>
 
     <main class="container">
-        <div  class="row">
+        <div class="row">
             <div class="column">
-                <h2>About startup</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam fugiat. Blanditiis quas eaque, autem voluptates nulla quod itaque asperiores est et ullam. Ducimus quis, libero recusandae laborum sapiente porro!</p>
+                <h2 class="section-title">About startup</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestias
+                    tenetur qui repellendus maxime, aliquid possimus id quisquam amet iusto reiciendis, <a
+                        href="#">Matrox</a> consequuntur dolor corrupti exercitationem consectetur hic sequi!</p>
+                <div class="progress-bar">
+                    <div class="top">
+                        <div>UX design</div>
+                        <div>90%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="top">
+                        <div>Web design</div>
+                        <div>87%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bar" style="width: 87%;"></div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="top">
+                        <div>Web development</div>
+                        <div>15%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bar" style="width: 15%;"></div>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <h2>Have any questions?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem hic deserunt sequi. Nesciunt, adipisci hic explicabo quidem aliquid, quis tenetur, culpa repudiandae porro libero natus? A mollitia rerum repellendus adipisci?</p>
+                <h2 class="section-title">Have any questions?</h2>
+                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum beatae vel
+                    at corrupti architecto <a href="mailto:mano@pastas.lt">mano@pastas.lt</a> totam neque cupiditate
+                    nesciunt suscipit animi consequatur, ducimus quo, molestias quae?</p>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="first-name">Name</label>
+                        <input id="first-name" type="text" value="" placeholder="Your name" minlength="3" maxlength="25"
+                            autofocus required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" value="" placeholder="Your email, eg: user@email.xyz" required>
+                    </div>
+                </form>
+                <div class="form">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+                <div class="form">
+                    <button type="submit">Send Message</button>
+                </div>
             </div>
         </div>
     </main>
 
     <footer class="container bg-blue">
-        <div class="row-short">
-            <img class="logo" src="#" alt="Logo">
-        
-            <div class="text-trio">
-                <p>Copyright &copy;2025 <a href="#">Matrox</a></p>
-                <p>All rights reserved</p>
-                <p>Designed by <a>TrendyTheme</a></p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, rem neque? Reiciendis est aliquam quibusdam voluptates id dolor officiis architecto impedit eaque explicabo eum laboriosam adipisci laborum facere, eius odit?</p>
+        <div class="row">
+            <div class="socials">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-dribbble"></a>
+                <a href="#" class="fa fa-tumblr"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-rss"></a>
             </div>
+        </div>
+        <div class="row-short">
+            <img class="logo-white" src="./images/logo-white.png" alt="Logo">
+            <div class="text-trio">
+                <p>Copyright &copy; 2025 <a href="#">Matrox</a></p>
+                <p>All rights reserved</p>
+                <p>Designed by <a href="#">TrendyTheme</a></p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem assumenda incidunt, accusantium
+                facilis ipsam consectetur sed, <a href="#">200+</a> magnam, provident voluptas saepe. Est facilis
+                temporibus enim <a href="#">Matrox</a> quae distinctio.</p>
         </div>
     </footer>
 </body>
